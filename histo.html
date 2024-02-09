@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Botanika</title>
+
+	<!-- Include Bootstrap CSS via CDN -->
+    <link rel="stylesheet" type="text/css" href="asset/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="asset/lib/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&display=swap" rel="stylesheet">
+
+    <!-- Include Firebase JavaScript SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-app-compat.js"></script>
+    <script
+        src="https://www.gstatic.com/firebasejs/9.1.0/firebase-database-compat.js"></script>
+
+    <!-- Include Bootstrap JavaScript and Bootstrap Bundle-->
+    <script type="text/javascript" src="asset/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="asset/js/bootstrap.min.js"></script>
+    <!-- Include Firebase JavaScript SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-database-compat.js">
+    </script>
+
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="container-fluid">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-12">
+            <nav class="navbar bg-body-tertiary fixed-top">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#"><img src="images/logo.png" alt="logo" class="img-fluid"></a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                      <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img src="images/logo.png" alt="logo" class="img-fluid"></h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                      <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item bg-body-tertiary mb-3">
+                          <a class="nav-link"  href="home.html"><i class="fa fa-mobile" aria-hidden="true"></i> Real-time Data
+                          </a>
+                        </li>
+                        <li class="nav-item bg-body-tertiary mb-3">
+                          <a class="nav-link active" aria-current="page" href="histo.html"><i class="fa fa-database" aria-hidden="true"></i> Historical Database</a>
+                        </li>
+                        <li class="nav-item bg-body-tertiary mb-3">
+                          <a class="nav-link" href="probe.html"><i class="fa fa-microchip" aria-hidden="true"></i>
+                            In-house Prototype
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+     <section class="container-fluid">
+      <div class="container">
+        <div class="row mt-4">
+          <div class="col-12 col-sm-12 col-md-12 text-center my-3">
+            <!-- <div class="banner">
+              <img src="images/b-5-01.png" alt="Banner" class="img-fluid">
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container-fluid">
+      <div class="container">
+        <div class="row mt-4">
+          <div class="col-12 col-sm-12 col-md-12 text-center my-3">
+            <div class="banner">
+              <img src="images/b-5-01.png" alt="Banner" class="img-fluid">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row mt-4">
+          <div class="col-12 col-sm-12 col-md-12 text-center my-3">
+            <div class="m-content">
+              <p>It's open access. Anyone can see and download previous data and also use for their research.</p>
+              <br>
+              <h1>To See Historical Data of Rooftop Garden</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+       <div class="container">
+        <div class="row mt-4">
+          <div class="col-12 col-sm-12 col-md-12 text-center my-3">
+            <div class="btn">
+              <button><a href="https://docs.google.com/spreadsheets/d/1Tn0a8z7FmPYoHecttckRQuBQt0L9ZS-azSvTBqlghds/edit#gid=0">Click Here <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+</body>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Botanika</title>
+
+	<!-- Include Bootstrap CSS via CDN -->
+    <link rel="stylesheet" type="text/css" href="asset/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="asset/lib/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&display=swap" rel="stylesheet">
+
+    <!-- Include Firebase JavaScript SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-app-compat.js"></script>
+    <script
+        src="https://www.gstatic.com/firebasejs/9.1.0/firebase-database-compat.js"></script>
+
+    <!-- Include Bootstrap JavaScript and Bootstrap Bundle-->
+    <script type="text/javascript" src="asset/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="asset/js/bootstrap.min.js"></script>
+    <!-- Include Firebase JavaScript SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-database-compat.js">
+    </script>
+
+</head>
+<body>
+	<!-- Header Section -->
+    <header class="container-fluid">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-12">
+            <nav class="navbar bg-body-tertiary fixed-top">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#"><img src="images/logo.png" alt="logo" class="img-fluid"></a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                      <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img src="images/logo.png" alt="logo" class="img-fluid"></h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                      <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item bg-body-tertiary mb-3">
+                          <a class="nav-link active" aria-current="page" href="#"><i class="fa fa-mobile" aria-hidden="true"></i> Real-time Data</a>
+                        </li>
+                        <li class="nav-item bg-body-tertiary mb-3">
+                          <a class="nav-link" href="histo.html"><i class="fa fa-database" aria-hidden="true"></i> Historical Database</a>
+                        </li>
+                        <li class="nav-item bg-body-tertiary mb-3">
+                          <a class="nav-link" href="probe.html"><i class="fa fa-microchip" aria-hidden="true"></i> 
+                            In-house Prototype
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Sensor Data -->
+    <section class="container-fluid sensor-data">
+      <div class="container">
+        <div class="row mt-4">
+          <div class="col-12 col-sm-12 col-md-12 text-center my-3">
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row mt-4">
+          <div class="col-12 col-sm-12 col-md-12 text-center my-3">
+          </div>
+        </div>
+      </div>
+      <div class="container">
+          <div class="row mt-4">
+            <div class="col-sm-12 text-center">
+              <div class="box-1 p-3 border">
+                 
+                      <h1><b>Real-time Data</b></h1>
+                      <p></p>
+                      <div id="currentTime"></div>
+                      <div id="currentDate"></div>
+                
+              </div>
+            </div>
+          </div>
+     </div>
+    </section>
+  <section class="container-fluid">
+    <div class="container">
+        <div class="row mt-4">
+          <div class="col-12 col-sm-12 col-md-12 my-3">
+          </div>
+        </div>
+      </div>
+    <div class="container">
+      <div class="row justify-content-center text-center">
+        <div class="col-6 col-sm-6 col-md-2 ">
+              <div class="box-2 py-4 mb-3">
+                  <h2>
+                     <i class="fa fa-spinner" aria-hidden="true"></i>
+                  </h2>
+   
+                  <h5 class="card-title">Soil Moisture</h5>
+                  <div class="sensor-card" id="sensor1"></div>
+              </div>
+        </div>
+      <!--   <div class="col-6 col-sm-6 col-md-2">
+              <div class="box-2 py-3 mb-3">
+                          
+                          <h2>
+                              <i class="fa fa-thermometer-half" aria-hidden="true"></i>
+                          </h2>
+                      <h5 class="card-title">Soil Temperature(°C)</h5>
+                      <div class="sensor-card" id="sensor3"></div>
+              </div>
+        </div> -->
+        <div class="col-6 col-sm-6 col-md-2">
+              <div class="box-2 p-2 mb-3">
+                 
+                          <h2>
+                              <i class="fa fa-thermometer-full" aria-hidden="true"></i>
+                          </h2>
+                   
+                      <h5 class="card-title">Temperature(°C)</h5>
+                      <div class="card-text" id="sensor2"></div>      
+              </div>
+        </div>
+        <div class="col-6 col-sm-6 col-md-2">
+              <div class="box-2 py-3 mb-3">
+                          <h2>
+                              <i class="fa fa-cloud" aria-hidden="true"></i>
+                          </h2>
+                      <h5 class="card-title">Humidity</h5>
+                      <div class="card-text" id="sensor4"></div>
+              </div>
+        </div>
+        <div class="col-6 col-sm-6 col-md-2">
+              <div class="box-2 py-3 mb-3">
+                          <h2>
+                              <i class="fa fa-tint" aria-hidden="true"></i>
+                          </h2>
+                      <h5 class="card-title">Rainfall</h5>
+                      <div class="card-text" id="sensor5"></div>
+              </div>
+        </div>
+      </div>
+    </div>
+  </section>
+    <script>
+      // Initialize Firebase
+        const firebaseConfig = {
+            apiKey: "AIzaSyAPBDFEI2TLTjjwYE9yGqQAL7zpwwszQhc",
+            authDomain: "iot-botanika.firebaseapp.com",
+            databaseURL: "https://iot-botanika-default-rtdb.firebaseio.com",
+            projectId: "iot-botanika",
+            storageBucket: "iot-botanika.appspot.com",
+            messagingSenderId: "427068943756",
+            appId: "1:427068943756:web:a2501460d273dad1d0baa9"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+
+        // Reference to your Firebase Realtime Database
+        const dbRef = firebase
+            .database()
+            .ref('Data');
+
+        // Function to update sensor data in a specific card
+        function updateSensorCard(sensorId, sensorData) {
+            const sensorCard = document.getElementById(sensorId);
+
+            // Clear previous data
+            sensorCard.innerHTML = '';
+
+            // Display the sensor data in the card
+            for (const sensorName in sensorData) {
+                if (sensorData.hasOwnProperty(sensorName)) {
+                    const sensorValue = sensorData[sensorName];
+                    const sensorDiv = document.createElement('div');
+                    sensorDiv.innerHTML = `<strong>${sensorName}:</strong> ${JSON.stringify(
+                        sensorValue
+                    )}`;
+                    sensorCard.appendChild(sensorDiv);
+                }
+            }
+        }
+
+        // Function to update current time in AM/PM format
+        function updateCurrentTime() {
+            const currentTimeDiv = document.getElementById('currentTime');
+            const now = new Date();
+            const hours = now.getHours();
+            const minutes = now.getMinutes();
+            const ampm = hours >= 12
+                ? 'PM'
+                : 'AM';
+            const formattedTime = `${hours % 12 || 12}:${minutes < 10
+                ? '0'
+                : ''}${minutes} ${ampm}`;
+            currentTimeDiv.innerText = `Current Time: ${formattedTime}`;
+        }
+
+        // Function to update current date in dd-mm-yyyy format
+        function updateCurrentDate() {
+            const currentDateDiv = document.getElementById('currentDate');
+            const now = new Date();
+            const day = now.getDate();
+            const month = now.getMonth() + 1;
+            const year = now.getFullYear();
+            const formattedDate = `${day < 10
+                ? '0'
+                : ''}${day}-${month < 10
+                    ? '0'
+                    : ''}${month}-${year}`;
+            currentDateDiv.innerText = `Current Date: ${formattedDate}`;
+        }
+        // Listen for changes in Firebase Realtime Database and update the data in the
+        // respective cards
+        dbRef.on('value', (snapshot) => {
+            const sensorData = snapshot.val();
+            updateSensorCard(
+                'sensor1',
+                sensorData['Sensors']['CapacitiveSoilMoistureSensor']
+            );
+            updateSensorCard('sensor2', sensorData['Sensors']['DHT1']);
+            // updateSensorCard('sensor3', sensorData['Sensors']['DS18B20']);
+            updateSensorCard('sensor4', sensorData['Sensors']['DHT2']);
+            updateSensorCard('sensor5', sensorData['Sensors']['RainDropSensor']);
+            updateSensorCard('otherData1', sensorData['Other Data']['WiFi']);
+            updateSensorCard('otherData2', sensorData['Other Data']['status']);
+            // Add more sensor cards as needed
+        });
+
+        // Update current time and date initially
+        updateCurrentTime();
+        updateCurrentDate();
+
+        // Update current time and date every second
+        setInterval(() => {
+            updateCurrentTime();
+            updateCurrentDate();
+        }, 1000);
+    </script>
+</body>
+</html>
