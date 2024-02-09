@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Botanika</title>
+
+	<!-- Include Bootstrap CSS via CDN -->
+    <link rel="stylesheet" type="text/css" href="asset/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="asset/lib/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&display=swap" rel="stylesheet">
+
+    <!-- Include Firebase JavaScript SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-app-compat.js"></script>
+    <script
+        src="https://www.gstatic.com/firebasejs/9.1.0/firebase-database-compat.js"></script>
+
+    <!-- Include Bootstrap JavaScript and Bootstrap Bundle-->
+    <script type="text/javascript" src="asset/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="asset/js/bootstrap.min.js"></script>
+    <!-- Include Firebase JavaScript SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-database-compat.js">
+    </script>
+
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="container-fluid">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-12">
+            <nav class="navbar bg-body-tertiary fixed-top">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#"><img src="images/logo.png" alt="logo" class="img-fluid"></a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                      <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img src="images/logo.png" alt="logo" class="img-fluid"></h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                      <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item bg-body-tertiary mb-3">
+                          <a class="nav-link"  href="home.html"><i class="fa fa-mobile" aria-hidden="true"></i> Real-time Data</a>
+                        </li>
+                        <li class="nav-item bg-body-tertiary mb-3">
+                          <a class="nav-link " aria-current="page" href="histo.html"><i class="fa fa-database" aria-hidden="true"></i> Historical Database</a>
+                        </li>
+                        <li class="nav-item bg-body-tertiary mb-3">
+                          <a class="nav-link active" href="probe.html"><i class="fa fa-microchip" aria-hidden="true"></i> 
+                            In-house Prototype
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="container-fluid">
+      <div class="container">
+        <div class="row mt-4">
+          <div class="col-12 col-sm-12 col-md-12 text-center">
+            <!-- <div class="banner">
+              <img src="images/b-5-01.png" alt="Banner" class="img-fluid">
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container-fluid">
+      <div class="container">
+        <div class="row mt-4">
+          <div class="col-12 col-sm-12 col-md-12 my-3">
+            <div class="banner">
+              <img src="images/p-01.png" alt="Banner" class="img-fluid">
+            </div>
+            <div class="content">
+              <h1>
+                In-house Prototype
+              </h1>
+              <p>
+                This in-house prototype integrates moisture, humidity, temperature, and rainfall sensors to store real-time data accessible through this app. 
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container-fluid">
+        <div class="container">
+            <div class="row border my-3">
+                <div class="col-12 py-2 text-center">
+                    <div class="title">
+                        <h2>Prototype Tools</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-12 my-3">
+               <div class="box-3 p-2">
+                <img src="images/n-01.png" alt="image" class="img-fluid">
+                <h3>Microcontroller</h3>
+                <p>NodeMCU EPS8266 is an open-source firmware and development board that enables Wi-Fi connectivity, making it suitable for IoT projects by allowing easy control and data transmission to and from various devices.</p>
+               </div> 
+              </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-12 mb-3">
+               <div class="box-3 p-2">
+                <img src="images/m-01.png" alt="image" class="img-fluid">
+                <h3>Capacitive Soil Moisture</h3>
+                <p>Capacitive Soil Moisture sensor measures soil moisture content by detecting changes in the capacitance of the sensor's probes as they interact with the surrounding soil.</p>
+               </div> 
+              </div>
+            </div>
+        </div>
+      <!--   <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-12 mb-3">
+               <div class="box-3 p-2">
+                <img src="images/t-1-01-01.png" alt="image" class="img-fluid">
+                <h3>DS18B20 Sensor</h3>
+                <p> DS18B20 sensor is a digital temperature sensor that provides accurate temperature measurements and communicates with a microcontroller through a one-wire interface.</p>
+               </div> 
+              </div>
+            </div>
+        </div> -->
+        <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-12 mb-3">
+               <div class="box-3 p-2">
+                <img src="images/d-01.png" alt="image" class="img-fluid">
+                <h3>DHT11 Sensor</h3>
+                <p>DHT11 sensor is a digital temperature and humidity sensor that measures and provides real-time data on ambient temperature and relative humidity.</p>
+               </div> 
+              </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-12 mb-3">
+               <div class="box-3 p-2">
+                <img src="images/r-01.png" alt="image" class="img-fluid">
+                <h3>Rainfall Sensor</h3>
+                <p>A rainfall sensor measures precipitation to determine the intensity and duration of rain. This rainfall sensor give value in binary format.</p>
+               </div> 
+              </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-12 mb-3">
+               <div class="box-3 p-2">
+                <img src="images/s-01.png" alt="image" class="img-fluid">
+                <h3>Solar Panel</h3>
+                <p>Solar panels are photovoltaic devices that convert sunlight into electricity, providing a sustainable source of renewable energy.</p>
+               </div> 
+              </div>
+            </div>
+        </div>
+    </section>
+</body>
